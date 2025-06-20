@@ -14,19 +14,36 @@
     }
   </style>
 </head>
-<body class="bg-white text-gray-800 font-sans">
-
-  <!-- Navbar -->
-  <nav class="fixed top-0 w-full bg-white shadow z-50">
+<nav class="fixed top-0 w-full bg-white shadow z-50">
   <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+
+    <!-- Logo -->
     <a href="#cover" class="font-bold text-pink-500 text-xl hover:text-pink-600 transition">🎀 ErikaPD</a>
-    <ul class="flex space-x-6 text-gray-700 text-sm font-medium">
-      <!-- <li><a href="#cover" class="hover:text-pink-500">Home</a></li> --> <!-- Ini sudah dihapus -->
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex space-x-6 text-gray-700 text-sm font-medium">
       <li><a href="#profile" class="hover:text-pink-500">Profile</a></li>
       <li><a href="#skills" class="hover:text-pink-500">Skills</a></li>
       <li><a href="#experience" class="hover:text-pink-500">Experience</a></li>
       <li><a href="#projects" class="hover:text-pink-500">Projects</a></li>
       <li><a href="#contact" class="hover:text-pink-500">Contact</a></li>
+    </ul>
+
+    <!-- Hamburger Menu (Mobile) -->
+    <div class="md:hidden">
+      <button id="menu-button" class="text-pink-500 focus:outline-none text-2xl">☰</button>
+    </div>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 bg-white">
+    <ul class="flex flex-col space-y-2 text-gray-700 text-sm font-medium">
+      <li><a href="#profile" class="hover:text-pink-500 block">Profile</a></li>
+      <li><a href="#skills" class="hover:text-pink-500 block">Skills</a></li>
+      <li><a href="#experience" class="hover:text-pink-500 block">Experience</a></li>
+      <li><a href="#projects" class="hover:text-pink-500 block">Projects</a></li>
+      <li><a href="#contact" class="hover:text-pink-500 block">Contact</a></li>
     </ul>
   </div>
 </nav>
@@ -248,6 +265,15 @@
   AOS.init({
     duration: 800,
     once: true
+  });
+</script>
+
+<script>
+  const button = document.getElementById('menu-button');
+  const menu = document.getElementById('mobile-menu');
+
+  button.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
   });
 </script>
 
