@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ErikaPD - Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- AOS CSS -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
     html {
@@ -14,47 +13,43 @@
     }
   </style>
 </head>
-<nav class="fixed top-0 w-full bg-white shadow z-50">
-  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
 
-    <!-- Logo -->
-    <a href="#cover" class="font-bold text-pink-500 text-xl hover:text-pink-600 transition">🎀 ErikaPD</a>
+<body class="bg-white text-gray-800 font-sans">
 
-    <!-- Desktop Menu -->
-    <ul class="hidden md:flex space-x-6 text-gray-700 text-sm font-medium">
-      <li><a href="#profile" class="hover:text-pink-500">Profile</a></li>
-      <li><a href="#skills" class="hover:text-pink-500">Skills</a></li>
-      <li><a href="#experience" class="hover:text-pink-500">Experience</a></li>
-      <li><a href="#projects" class="hover:text-pink-500">Projects</a></li>
-      <li><a href="#contact" class="hover:text-pink-500">Contact</a></li>
-    </ul>
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-white shadow z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#cover" class="font-bold text-pink-500 text-xl hover:text-pink-600 transition">🎀 ErikaPD</a>
 
-    <!-- Hamburger Menu (Mobile) -->
-    <div class="md:hidden">
-      <button id="menu-button" class="text-pink-500 focus:outline-none text-2xl">☰</button>
+      <ul class="hidden md:flex space-x-6 text-gray-700 text-sm font-medium">
+        <li><a href="#profile" class="hover:text-pink-500">Profile</a></li>
+        <li><a href="#skills" class="hover:text-pink-500">Skills</a></li>
+        <li><a href="#experience" class="hover:text-pink-500">Experience</a></li>
+        <li><a href="#projects" class="hover:text-pink-500">Projects</a></li>
+        <li><a href="#contact" class="hover:text-pink-500">Contact</a></li>
+      </ul>
+
+      <div class="md:hidden">
+        <button id="menu-button" class="text-pink-500 focus:outline-none text-2xl">☰</button>
+      </div>
     </div>
 
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 bg-white">
-    <ul class="flex flex-col space-y-2 text-gray-700 text-sm font-medium">
-      <li><a href="#profile" class="hover:text-pink-500 block">Profile</a></li>
-      <li><a href="#skills" class="hover:text-pink-500 block">Skills</a></li>
-      <li><a href="#experience" class="hover:text-pink-500 block">Experience</a></li>
-      <li><a href="#projects" class="hover:text-pink-500 block">Projects</a></li>
-      <li><a href="#contact" class="hover:text-pink-500 block">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 bg-white">
+      <ul class="flex flex-col space-y-2 text-gray-700 text-sm font-medium">
+        <li><a href="#profile" class="hover:text-pink-500 block">Profile</a></li>
+        <li><a href="#skills" class="hover:text-pink-500 block">Skills</a></li>
+        <li><a href="#experience" class="hover:text-pink-500 block">Experience</a></li>
+        <li><a href="#projects" class="hover:text-pink-500 block">Projects</a></li>
+        <li><a href="#contact" class="hover:text-pink-500 block">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <!-- Cover -->
   <section id="cover" class="h-screen flex flex-col justify-center items-center text-center bg-pink-100 px-4 pt-20">
     <p class="text-sm mb-2 animate-fadeIn">By Erika Pramesti Dewi</p>
     <h1 class="text-6xl font-extrabold text-pink-500 leading-tight animate-bounce">PORTFOLIO</h1>
-    <a href="#profile" class="bg-pink-500 text-white py-2 px-6 rounded-lg hover:bg-pink-600 transition">
-      Let's Gooo!
-    </a>
+    <a href="#profile" class="bg-pink-500 text-white py-2 px-6 rounded-lg hover:bg-pink-600 transition">Let's Gooo!</a>
   </section>
 
   <!-- Profile -->
@@ -259,26 +254,21 @@
     </div>
   </section>
 
-  <!-- AOS JS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 800,
-    once: true
-  });
-</script>
+ <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
 
-<script>
-  const button = document.getElementById('menu-button');
-  const menu = document.getElementById('mobile-menu');
+  <script>
+    const button = document.getElementById('menu-button');
+    const menu = document.getElementById('mobile-menu');
 
-  button.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-  });
-</script>
+    button.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
 
-
-  <!-- Footer -->
   <footer class="text-center text-sm mt-10 mb-6 text-gray-400">
     &copy; 2025 Erika Pramesti Dewi
   </footer>
